@@ -1,0 +1,35 @@
+.se-container
+  #main-bg.se-slope
+    .se-content
+      = video_tag ['main-video.mp4', 'main-video.webm', 'main-video.ogv', 'main-video.3gp'], autoplay: '', loop: '', preload: 'auto',  poster: 'main-bg.jpg'
+  #booking-content.se-slope
+    .se-content
+      .container
+        = link_to 'Book a Demnostration', '#', class: 'btn btn-flat btn-book pull-right toggle-content', 'data-target' => '#booking-form-wrap'
+        #booking-form-wrap
+          = render 'bookings/form'
+  .dummy.se-slope
+  #description.se-slope
+    .se-content
+      .container
+        .row
+          .col-md-9
+            .advantage
+              .pad
+                %h4 Why Arvor?
+                %p Arvor Fishing boats are simply the best, most cost effective fishing boat money can buy. These quality boats have everything to satisfy even the most demanding of fisherman. 
+                %p They offer the unlimited in luxury and practicality. Fishing has never been better!
+                %p The inboard diesel engine gives reliability and fuel economy, whilst the deck layout gives maximum space right to the stern. These fast semi-planing boats have keels with stainless steel protection strips and a propeller shield adds further protection for the prop and rudder.
+          .col-md-3
+            .contact
+              .pad
+                %h5
+                  Contact an
+                  %br
+                  ARVOR EXPERT
+                %br
+                01702 258 885
+                %br
+                = mail_to 'info@arvorboats.co.uk', 'info@arvorboats.co.uk'
+  .dummy.se-slope
+  = render 'shared/links'
